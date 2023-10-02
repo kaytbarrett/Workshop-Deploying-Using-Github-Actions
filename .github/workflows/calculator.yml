@@ -1,0 +1,12 @@
+name: calculator
+on:
+  - push
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "Hello there!";
+      - run: npm install 
+      - run: npm install -g jest --save--dev
+      - run: npm run test
